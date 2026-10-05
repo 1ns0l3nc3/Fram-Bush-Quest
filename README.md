@@ -1,3 +1,4 @@
+je mange 
 
 
 Action-RPG 2D en pixel art, ambiance MMO, fait avec Godot 4.
