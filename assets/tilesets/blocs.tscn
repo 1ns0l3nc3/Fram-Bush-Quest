@@ -2,37 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://cyxyi1qloj72e" path="res://assets/tilesets/herbe.png" id="1_o37rm"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_q7fea"]
-
-[sub_resource type="Skin" id="Skin_tjjq5"]
-bind_count = 3
-bind/0/name = &""
-bind/0/bone = -1
-bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-bind/1/name = &""
-bind/1/bone = -1
-bind/1/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-bind/2/name = &""
-bind/2/bone = -1
-bind/2/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm4l7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v74bd"]
 albedo_texture = ExtResource("1_o37rm")
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i1nqx"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[sub_resource type="BoxMesh" id="BoxMesh_mm4l7"]
+material = SubResource("StandardMaterial3D_v74bd")
 
 [node name="Node3D" type="Node3D" unique_id=389862692]
 
-[node name="Herbe" type="MeshInstance3D" parent="." unique_id=849617331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0202775, -0.02406907, -0.39356127)
-mesh = SubResource("BoxMesh_q7fea")
-skin = SubResource("Skin_tjjq5")
-surface_material_override/0 = SubResource("StandardMaterial3D_mm4l7")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Herbe" unique_id=1265354974]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Herbe/StaticBody3D" unique_id=101756957]
-shape = SubResource("ConcavePolygonShape3D_i1nqx")
+[node name="Herbe" type="MeshInstance3D" parent="." unique_id=517417447]
+mesh = SubResource("BoxMesh_mm4l7")
