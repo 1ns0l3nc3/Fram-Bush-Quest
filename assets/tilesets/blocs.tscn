@@ -12,12 +12,12 @@ material = SubResource("StandardMaterial3D_o37rm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8ef82"]
 
-[node name="Herbe" type="Node3D" unique_id=389862692]
-
-[node name="Herbe" type="MeshInstance3D" parent="." unique_id=517417447]
+[node name="Herbe" type="MeshInstance3D" unique_id=517417447]
 mesh = SubResource("BoxMesh_mm4l7")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1659778273]
+[node name="Herbe" type="Node3D" parent="." unique_id=389862692]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1450817289]
+[node name="StaticBody3D" type="StaticBody3D" parent="Herbe" unique_id=1659778273]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Herbe/StaticBody3D" unique_id=1450817289]
 shape = SubResource("BoxShape3D_8ef82")
