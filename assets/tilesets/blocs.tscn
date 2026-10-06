@@ -2,15 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://cyxyi1qloj72e" path="res://assets/tilesets/herbe.png" id="1_o37rm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v74bd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o37rm"]
 albedo_texture = ExtResource("1_o37rm")
 uv1_triplanar = true
 texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mm4l7"]
-material = SubResource("StandardMaterial3D_v74bd")
+material = SubResource("StandardMaterial3D_o37rm")
 
-[node name="Node3D" type="Node3D" unique_id=389862692]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ef82"]
+
+[node name="Herbe" type="Node3D" unique_id=389862692]
 
 [node name="Herbe" type="MeshInstance3D" parent="." unique_id=517417447]
 mesh = SubResource("BoxMesh_mm4l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1659778273]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1450817289]
+shape = SubResource("BoxShape3D_8ef82")

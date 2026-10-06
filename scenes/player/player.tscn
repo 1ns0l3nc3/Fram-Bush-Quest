@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d2i1wnb2snkw2"]
+
+[ext_resource type="Texture2D" uid="uid://bsus54e5hylk8" path="res://assets/sprites/player/fram_hero_sheet.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://jsx3nwmdtjgi" path="res://scenes/player/player.gd" id="1_dovo2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jb7d4"]
+margin = 0.0
+radius = 0.3
+height = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjjq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8afob")
+}],
+"loop": 1,
+"name": &"dos",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"face",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"profil_droit",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"profil_gauche",
+"speed": 5.0
+}]
+
+[node name="Node3D" type="Node3D" unique_id=1291508337]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=904412294]
+script = ExtResource("1_dovo2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1359725881]
+shape = SubResource("CapsuleShape3D_jb7d4")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Player" unique_id=1671557279]
+offset = Vector2(4, 2)
+pixel_size = 0.03125
+billboard = 2
+alpha_cut = 1
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_tjjq5")
+animation = &"dos"
+frame_progress = 0.066680476
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1083106765]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 6, 8)
+fov = 30.0
+near = 0.084
